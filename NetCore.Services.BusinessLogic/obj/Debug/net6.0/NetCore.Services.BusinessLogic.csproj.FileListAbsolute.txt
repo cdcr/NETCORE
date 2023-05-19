@@ -1,0 +1,17 @@
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Services.BusinessLogic.deps.json
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Services.BusinessLogic.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Services.BusinessLogic.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Domain.Abstractions.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Domain.Entities.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Domain.Abstractions.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\bin\Debug\net6.0\NetCore.Domain.Entities.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\refint\NetCore.Services.BusinessLogic.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\NetCore.Services.BusinessLogic.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Services.BusinessLogic\obj\Debug\net6.0\ref\NetCore.Services.BusinessLogic.dll

@@ -1,0 +1,15 @@
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\bin\Debug\net6.0\NetCore.Domain.Abstractions.deps.json
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\bin\Debug\net6.0\NetCore.Domain.Abstractions.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\bin\Debug\net6.0\NetCore.Domain.Abstractions.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\bin\Debug\net6.0\NetCore.Domain.Entities.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\bin\Debug\net6.0\NetCore.Domain.Entities.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\refint\NetCore.Domain.Abstractions.dll
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\NetCore.Domain.Abstractions.pdb
+C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Abstractions\obj\Debug\net6.0\ref\NetCore.Domain.Abstractions.dll
