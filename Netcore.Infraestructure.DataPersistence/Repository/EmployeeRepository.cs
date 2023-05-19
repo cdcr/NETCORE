@@ -45,12 +45,12 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         public void UpdateEmployee(Employee employee)
         {
             if (employee != null)
-                _context.Update(employee);
+                _context.Set<Employee>().Update(employee);
         }
         public void AddEmployee(Employee employee)
         {
             if (employee != null)
-                _context.Add(employee);
+                _context.Set<Employee>().Add(employee);
         }
 
         public  void RemoveEmployee(int Id)

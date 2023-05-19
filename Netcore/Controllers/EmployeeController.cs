@@ -43,7 +43,7 @@ namespace Netcore.Controllers
             _emloyeeService.UpdateEmployee(employee);
         }
 
-        [HttpPost]
+        [HttpDelete]
         [Route("Delete")]
         public void RemoveEmployee(EmployeeDTO employee)
         {

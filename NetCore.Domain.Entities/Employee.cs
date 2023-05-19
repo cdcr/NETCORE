@@ -28,7 +28,8 @@ namespace NetCore.Domain.Entities
 
         public Employee(EmployeeDTO dto)
         {
-            
+            if(dto.Id != null)
+                Id = dto.Id;
             FirstName = dto.FirstName;
             LastName = dto.LastName;
             Address = dto.Address;
