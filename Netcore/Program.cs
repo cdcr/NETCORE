@@ -13,16 +13,27 @@ SystemInfo systemInfo = new SystemInfo();
 systemInfo.FillSettings();
 builder.Services.AddSingleton<ISystemInfo>(systemInfo);
 
-var optionsBuilder = new DbContextOptionsBuilder<EmployeeContext>();
+var optionsBuilder = new DbContextOptionsBuilder<UserContext>();
 optionsBuilder.UseSqlServer(systemInfo.ConnectionString);
 builder.Services.AddSingleton(optionsBuilder.Options);
-builder.Services.AddDbContext<EmployeeContext>();
+builder.Services.AddDbContext<UserContext>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
-builder.Services.AddTransient<IEmployeeService, EmployeeService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors(options =>
+{
+
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -33,6 +44,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors();
 
 app.UseHttpsRedirection();
 

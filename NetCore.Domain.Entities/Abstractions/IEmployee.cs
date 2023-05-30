@@ -1,6 +1,6 @@
 ﻿namespace NetCore.Domain.Entities.Abstractions
 {
-    public interface IEmployee : IEntityBase
+    public interface IUser : IEntityBase
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

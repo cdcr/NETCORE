@@ -8,7 +8,7 @@ namespace NetCore.Domain.Abstractions.Repository
 {
     public interface IUnitOfWork : IDisposable
     {
-        IEmployeeRepository EmployeeRepository { get; }
+        IUserRepository UserRepository { get; }
         int Complete();
     }
 }

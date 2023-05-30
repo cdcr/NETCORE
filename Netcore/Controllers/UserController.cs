@@ -6,23 +6,23 @@ namespace Netcore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private IEmployeeService _emloyeeService;
-        public EmployeeController(IEmployeeService emloyeeService)
+        private IUserService _emloyeeService;
+        public UserController(IUserService emloyeeService)
         {
             _emloyeeService = emloyeeService;
         }
 
         [HttpGet]
         [Route("Search")]
-        public async Task<IEnumerable<EmployeeDTO>> GetEmployeesByField(string field, string value)
+        public async Task<IEnumerable<UserDTO>> GetUsersByField(string field, string value)
         {
             return await _emloyeeService.GeByField(field, value);
         }
 
         [HttpGet]
-        public async Task<IEnumerable<EmployeeDTO>> GetAllEmployees()
+        public async Task<IEnumerable<UserDTO>> GetAllUsers()
         {
             
             return await _emloyeeService.GetAll();
@@ -30,25 +30,25 @@ namespace Netcore.Controllers
 
         [HttpPost]
         [Route("Save")]
-        public void AddEmployee(EmployeeDTO employee)
+        public void AddUser(UserDTO User)
         {
-             _emloyeeService.AddEmployee(employee);
+             _emloyeeService.AddUser(User);
         }
 
         [HttpPut]
         [Route("Update")]
-        public void UpdateEmployee(EmployeeDTO employee)
+        public void UpdateUser(UserDTO User)
         {
 
-            _emloyeeService.UpdateEmployee(employee);
+            _emloyeeService.UpdateUser(User);
         }
 
         [HttpDelete]
         [Route("Delete")]
-        public void RemoveEmployee(EmployeeDTO employee)
+        public void RemoveUser(UserDTO User)
         {
 
-            _emloyeeService.RemoveEmployee(employee);
+            _emloyeeService.RemoveUser(User);
         }
     }
 

@@ -4,9 +4,9 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        protected internal EmployeeContext _context;
+        protected internal UserContext _context;
 
-        public BaseRepository(EmployeeContext context)
+        public BaseRepository(UserContext context)
         {
             _context = context;
         }
