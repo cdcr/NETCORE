@@ -10,3 +10,15 @@ C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Entities\obj\Deb
 C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Entities\obj\Debug\net6.0\refint\NetCore.Domain.Entities.dll
 C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.pdb
 C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\NetCore.Domain.Entities\obj\Debug\net6.0\ref\NetCore.Domain.Entities.dll
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\bin\Debug\net6.0\NetCore.Domain.Entities.deps.json
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\bin\Debug\net6.0\NetCore.Domain.Entities.dll
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\bin\Debug\net6.0\NetCore.Domain.Entities.pdb
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.csproj.AssemblyReference.cache
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.AssemblyInfoInputs.cache
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.AssemblyInfo.cs
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.csproj.CoreCompileInputs.cache
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.dll
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\refint\NetCore.Domain.Entities.dll
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.pdb
+D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\ref\NetCore.Domain.Entities.dll

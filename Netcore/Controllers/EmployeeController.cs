@@ -30,14 +30,12 @@ namespace Netcore.Controllers
         }
 
         [HttpPost]
-        [Route("Save")]
         public void AddEmployee(EmployeeDTO employee)
         {
              _emloyeeService.AddEmployee(employee);
         }
 
         [HttpPut]
-        [Route("Update")]
         public void UpdateEmployee(EmployeeDTO employee)
         {
 
@@ -45,7 +43,6 @@ namespace Netcore.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete")]
         public void RemoveEmployee(EmployeeDTO employee)
         {
 
