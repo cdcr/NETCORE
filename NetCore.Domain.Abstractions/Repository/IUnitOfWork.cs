@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace NetCore.Domain.Abstractions.Repository
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork
     {
         IEmployeeRepository EmployeeRepository { get; }
-        int Complete();
     }
 }

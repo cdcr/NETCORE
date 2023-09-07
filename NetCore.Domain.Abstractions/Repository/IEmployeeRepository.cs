@@ -1,15 +1,16 @@
 ﻿
 using NetCore.Domain.Entities;
+using NetCore.Domain.Entities.Constants;
 
 namespace NetCore.Domain.Abstractions.Repository
 {
-    public  interface IEmployeeRepository : IBaseRepository<Employee> 
+    public  interface IEmployeeRepository 
     {
         Task<IEnumerable<Employee>> GetAllEmployees();
         Task<IEnumerable<Employee>> GetByField(string field, string value);
-        void RemoveEmployee(int Id);
-        void AddEmployee(Employee employee);
-        void UpdateEmployee(Employee employee);
+        Task RemoveEmployee(int Id);
+        Task AddEmployee(Employee employee);
+        Task UpdateEmployee(Employee employee);
 
 
     }

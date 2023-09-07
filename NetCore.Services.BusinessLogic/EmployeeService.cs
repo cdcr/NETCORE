@@ -17,7 +17,6 @@ namespace NetCore.Services.BusinessLogic
         {
             var newEmployee = new Employee(employeeDTO);
             _unitOfWork.EmployeeRepository.AddEmployee(newEmployee);
-            _unitOfWork.Complete();
         }
 
         public async Task<IEnumerable<EmployeeDTO>> GeByField(string field, string value)
@@ -26,14 +25,14 @@ namespace NetCore.Services.BusinessLogic
                 .Select(x => new EmployeeDTO()
                 {
                     Id = x.Id,
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    Address = x.Address,
-                    Email = x.Email,
-                    PhoneNumber = x.PhoneNumber,
-                    WorkingHours = x.WorkingHours,
-                    Title = x.Title,
-                    IsFullTime = x.IsFullTime
+                    FirstName = x.first_name,
+                    LastName = x.last_name,
+                    Address = x.address,
+                    Email = x.email,
+                    PhoneNumber = x.phone_number,
+                    WorkingHours = x.working_hours,
+                    Title = x.title,
+                    IsFullTime = x.is_full_time
                 });
         }
 
@@ -43,14 +42,14 @@ namespace NetCore.Services.BusinessLogic
                 .Select(x => new EmployeeDTO()
                 {
                     Id = x.Id,
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    Address = x.Address,
-                    Email = x.Email,
-                    PhoneNumber = x.PhoneNumber,
-                    WorkingHours = x.WorkingHours,
-                    Title = x.Title,
-                    IsFullTime = x.IsFullTime
+                    FirstName = x.first_name,
+                    LastName = x.last_name,
+                    Address = x.address,
+                    Email = x.email,
+                    PhoneNumber = x.phone_number,
+                    WorkingHours = x.working_hours,
+                    Title = x.title,
+                    IsFullTime = x.is_full_time
                 });
         }
 
@@ -58,14 +57,12 @@ namespace NetCore.Services.BusinessLogic
         {
             var newEmployee = new Employee(employeeDTO);
             _unitOfWork.EmployeeRepository.RemoveEmployee(newEmployee.Id);
-            _unitOfWork.Complete();
         }
 
         public void UpdateEmployee(EmployeeDTO employeeDTO)
         {
             var newEmployee = new Employee(employeeDTO);
             _unitOfWork.EmployeeRepository.UpdateEmployee(newEmployee);
-            _unitOfWork.Complete();
         }
     }
 }

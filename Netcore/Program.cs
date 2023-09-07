@@ -13,9 +13,10 @@ SystemInfo systemInfo = new SystemInfo();
 systemInfo.FillSettings();
 builder.Services.AddSingleton<ISystemInfo>(systemInfo);
 
-var optionsBuilder = new DbContextOptionsBuilder<EmployeeContext>();
-optionsBuilder.UseSqlServer(systemInfo.ConnectionString);
-builder.Services.AddSingleton(optionsBuilder.Options);
+//var optionsBuilder = new DbContextOptionsBuilder<EmployeeContext>();
+//optionsBuilder.UseSqlServer(systemInfo.ConnectionString);
+builder.Services.AddScoped<DapperContext>();
+//builder.Services.AddSingleton(optionsBuilder.Options);
 builder.Services.AddDbContext<EmployeeContext>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();

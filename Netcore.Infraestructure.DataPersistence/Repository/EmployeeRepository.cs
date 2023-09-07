@@ -1,65 +1,119 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NetCore.Domain.Abstractions.Repository;
 using NetCore.Domain.Entities;
+using NetCore.Domain.Entities.Constants;
 
 namespace NetCore.Infraestructure.DataPersistence.Repository
 {
-    public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
+    public class EmployeeRepository : DBBase, IEmployeeRepository
     {
-        public EmployeeRepository(EmployeeContext context) : base(context)
+        public EmployeeRepository(DapperContext dapperContext) : base(dapperContext)
         {
         }
 
         public async Task<IEnumerable<Employee>> GetAllEmployees()
         {
-            return await _context.Set<Employee>().ToListAsync();
+            var result = (await ExecuteQuery<Employee>(
+                $"SELECT *" +
+                $"  FROM {DatabaseTables.Employee}")).ToList();
+            return result;
+
         }
         
         public async Task<IEnumerable<Employee>> GetByField(string field, string value)
         {
-            List<Employee> books;
+            string Choseen = "";
             if (string.IsNullOrEmpty(value))
                 return await GetAllEmployees();
-
-            var search = value.ToLower();
-            switch (field.ToLower())
+            switch (field)
             {
-                case "first name":
-                    books = await _context.Set<Employee>().Where(x => x.FirstName.ToLower().Contains(search)).ToListAsync();
+                case "firstName":
+                    Choseen = "first_name";
                     break;
-                case "last name":
-                    books = await _context.Set<Employee>().Where(x => x.LastName.ToLower().Contains(search)).ToListAsync();
+                case "lastName":
+                    Choseen = "last_name";
                     break;
-                case "adress":
-                    books = await _context.Set<Employee>().Where(x => x.Address.ToLower().Contains(search)).ToListAsync();
+                case "address":
+                    Choseen = "address";
                     break;
                 case "title":
-                    books = await _context.Set<Employee>().Where(x => x.Title.ToLower().Contains(search)).ToListAsync();
+                    Choseen = "title";
                     break;
-                default:
-                    books = new List<Employee>();
+                default: 
+                    Choseen = "Id";
                     break;
             }
-            return books;
-        }
-        public void UpdateEmployee(Employee employee)
-        {
-            if (employee != null)
-                _context.Set<Employee>().Update(employee);
-        }
-        public void AddEmployee(Employee employee)
-        {
-            if (employee != null)
-                _context.Set<Employee>().Add(employee);
+            string query =
+                $"SELECT *" +
+                $" FROM {DatabaseTables.Employee} " +
+                $" WHERE [{Choseen}] LIKE '%{value}%'";
+            return (await ExecuteQuery<Employee>(query)).ToList();
         }
 
-        public  void RemoveEmployee(int Id)
+        public async Task UpdateEmployee(Employee employee)
         {
-            var employee = _context.Set<Employee>().Where(x => x.Id == Id).FirstOrDefault();
-            if (employee != null)
-                _context.Remove(employee);
+            await ExecuteQuery(
+                $"UPDATE {DatabaseTables.Employee}" +
+                $" SET [first_name] = @firstName" +
+                $",[last_name] = @lastName " +
+                $",[address] = @adress " +
+                $",[email] = @email " +
+                $",[phone_number] = @phoneNumber " +
+                $",[working_hours] = @workingHours " +
+                $",[title] = @title  " +
+                $",[is_full_time] = @isFullTime" +
+                $" WHERE [Id] = {employee.Id}",
+                new
+                {
+                    @firstName = employee.first_name,
+                    @lastName = employee.last_name,
+                    @adress = employee.address,
+                    @email = employee.email,
+                    @phoneNumber = employee.phone_number,
+                    @workingHours = employee.working_hours,
+                    @title = employee.title,
+                    @isFullTime = employee.is_full_time
+                });
+        }
+        public async Task AddEmployee(Employee employee)
+        {
+            await ExecuteQuery(
+                $"INSERT {DatabaseTables.Employee} " +
+                $" ([first_name]" +
+                $" ,[last_name]" +
+                $" ,[address]" +
+                $" ,[email]" +
+                $" ,[phone_number]" +
+                $" ,[working_hours]" +
+                $" ,[title]" +
+                $" ,[is_full_time])" +
+                $" VALUES" +
+                $"(@firstName" +
+                $",@lastName " +
+                $",@adress " +
+                $",@email " +
+                $",@phoneNumber " +
+                $",@workingHours " +
+                $",@title  " +
+                $",@isFullTime)",
+                new
+                {
+                    @firstName = employee.first_name,
+                    @lastName = employee.last_name,
+                    @adress = employee.address,
+                    @email = employee.email,
+                    @phoneNumber = employee.phone_number,
+                    @workingHours = employee.working_hours,
+                    @title = employee.title,
+                    @isFullTime = employee.is_full_time
+                });
         }
 
-        
+        public async Task RemoveEmployee(int Id)
+        {
+            await ExecuteQuery(
+                $"DELETE FROM {DatabaseTables.Employee}" +
+                $"WHERE [Id] = {Id}");
+        }
     }
 }

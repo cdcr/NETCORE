@@ -6,28 +6,15 @@ namespace NetCore.Infraestructure.DataPersistence
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private EmployeeContext _context;
+        private DapperContext _dapperContext;
 
-        public UnitOfWork()
+        public UnitOfWork(DapperContext dapperContext)
         {
-        }
-
-        public UnitOfWork(DbContextOptions<EmployeeContext> options)
-        {
-            _context = new EmployeeContext(options);
-            EmployeeRepository = new EmployeeRepository(_context);
+            _dapperContext = dapperContext; 
+            EmployeeRepository = new EmployeeRepository(_dapperContext);
         }
 
 
         public IEmployeeRepository EmployeeRepository { get; private set; }
-        public int Complete()
-        {
-            return _context.SaveChanges();
-        }
-
-        public void Dispose()
-        {
-            _context.Dispose();
-        }
     }
 }
