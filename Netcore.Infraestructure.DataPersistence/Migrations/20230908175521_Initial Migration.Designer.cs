@@ -12,7 +12,7 @@ using NetCore.Infraestructure.DataPersistence;
 namespace NetCore.Infraestructure.DataPersistence.Migrations
 {
     [DbContext(typeof(EmployeeContext))]
-    [Migration("20230908165823_Initial Migration")]
+    [Migration("20230908175521_Initial Migration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -36,7 +36,7 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
                     b.Property<bool>("Active")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Address")
+                    b.Property<string>("Adress")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

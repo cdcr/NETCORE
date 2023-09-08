@@ -31,7 +31,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                     books = await _context.Set<Employee>().Where(x => x.LastName.ToLower().Contains(search)).ToListAsync();
                     break;
                 case "adress":
-                    books = await _context.Set<Employee>().Where(x => x.Address.ToLower().Contains(search)).ToListAsync();
+                    books = await _context.Set<Employee>().Where(x => x.Adress.ToLower().Contains(search)).ToListAsync();
                     break;
                 case "title":
                     books = await _context.Set<Employee>().Where(x => x.Title.ToLower().Contains(search)).ToListAsync();
