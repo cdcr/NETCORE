@@ -16,7 +16,11 @@ namespace NetCore.Domain.Entities
         public string PhoneNumber { get; set; }
         public string Title { get; set; }
         public bool IsFullTime { get; set; }
-        public virtual WeekPeriod WeekPeriod { get; set; }
+        public DateTime InsertedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public decimal HourRate { get; set; }
+        public bool Active { get; set; }
+
         public Employee()
         { }
 
@@ -32,9 +36,6 @@ namespace NetCore.Domain.Entities
             Title = dto.Title;
             IsFullTime = dto.IsFullTime;
         }
-
-
     }
-
 }
 

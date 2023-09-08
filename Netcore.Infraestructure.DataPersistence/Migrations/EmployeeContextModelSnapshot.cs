@@ -30,6 +30,9 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -41,6 +44,12 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("HourRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("InsertedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsFullTime")
                         .HasColumnType("bit");
@@ -57,12 +66,10 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("WeekPeriodId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("WeekPeriodId");
 
                     b.ToTable("Employee");
                 });
@@ -112,22 +119,6 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("WeekPeriod");
-                });
-
-            modelBuilder.Entity("NetCore.Domain.Entities.Employee", b =>
-                {
-                    b.HasOne("NetCore.Domain.Entities.WeekPeriod", "WeekPeriod")
-                        .WithMany("Employees")
-                        .HasForeignKey("WeekPeriodId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("WeekPeriod");
-                });
-
-            modelBuilder.Entity("NetCore.Domain.Entities.WeekPeriod", b =>
-                {
-                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }
