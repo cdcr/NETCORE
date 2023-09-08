@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NetCore.Infraestructure.DataPersistence
-build_property.ProjectDir = C:\Users\USUARIO\source\repos\NetCoreAPI\Netcore\Netcore.Infraestructure.DataPersistence\
+build_property.ProjectDir = D:\REPOS\CourseTCC\NETCORE\Netcore.Infraestructure.DataPersistence\
