@@ -12,8 +12,8 @@ using NetCore.Infraestructure.DataPersistence;
 namespace NetCore.Infraestructure.DataPersistence.Migrations
 {
     [DbContext(typeof(EmployeeContext))]
-    [Migration("20230908175521_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20230908204614_Initial migration")]
+    partial class Initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -85,11 +85,11 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -112,6 +112,9 @@ namespace NetCore.Infraestructure.DataPersistence.Migrations
 
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("InsertedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");

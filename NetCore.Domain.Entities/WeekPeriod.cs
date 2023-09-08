@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace NetCore.Domain.Entities
+﻿namespace NetCore.Domain.Entities
 {
     public class WeekPeriod
     {
@@ -9,6 +6,8 @@ namespace NetCore.Domain.Entities
         public string Description { get; set; }
         public int EmployeeId { get; set; }
         public int WorkedHours { get; set; }
-        public DateTime UpdatedDate { get; set;}
+        public DateTime InsertedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+
     }
 }   
