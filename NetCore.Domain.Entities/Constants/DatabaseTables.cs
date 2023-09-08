@@ -4,5 +4,6 @@
     {
         // DB Objects
         public const string Employee = "[dbo].[Employee]";
+        public const string WeekPeriod = "[dbo].[WeekPeriod]";
     }
 }

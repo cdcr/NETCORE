@@ -8,16 +8,15 @@ namespace NetCore.Domain.Entities
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Address{ get; set; }
+        public string Adress{ get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public int WorkingHours { get; set; }
         public string Title{ get; set; }
         public bool IsFullTime { get; set; }
-        public DateTime InsertedDate { get; set; }
-        public DateTime UpdatedDate { get; set; }
         public decimal HourRate { get; set; }
         public bool Active { get; set; }
+        public DateTime InsertedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
 
 
         public Employee()
@@ -29,10 +28,9 @@ namespace NetCore.Domain.Entities
                 Id = dto.Id;
             FirstName = dto.FirstName;
             LastName = dto.LastName;
-            Address = dto.Address;
+            Adress = dto.Address;
             Email = dto.Email;
             PhoneNumber = dto.PhoneNumber;
-            WorkingHours = dto.WorkingHours;
             Title = dto.Title;
             IsFullTime = dto.IsFullTime;
             InsertedDate = dto.InsertedDate;

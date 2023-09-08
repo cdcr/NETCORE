@@ -19,7 +19,28 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
             return result;
 
         }
-        
+        public async Task<Employee> GetEmployeeByWeekPeriodId(int Id)
+        {
+            var result = (await ExecuteQuery<Employee>(
+                $"SELECT * " +
+                $"FROM {DatabaseTables.Employee} as E" +
+                $"LEFT JOIN {DatabaseTables.WeekPeriod} as WP " +
+                $"ON E.Id = WP.EmployeeId" +
+                $"AND WP.EmployeeId = {Id}")).FirstOrDefault();
+            return result;
+
+        }
+
+        public async Task<Employee> GetEmployeeById(int Id)
+        {
+            var result = (await ExecuteQuery<Employee>(
+                $"SELECT *" +
+                $" FROM {DatabaseTables.Employee}" +
+                $" WHERE [Id] = {Id}")).FirstOrDefault();
+            return result;
+
+        }
+
         public async Task<IEnumerable<Employee>> GetByField(string field, string value)
         {
             string Choseen = "";
@@ -71,10 +92,9 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 {
                     @firstName = employee.FirstName,
                     @lastName = employee.LastName,
-                    @adress = employee.Address,
+                    @adress = employee.Adress,
                     @email = employee.Email,
                     @phoneNumber = employee.PhoneNumber,
-                    @workingHours = employee.WorkingHours,
                     @title = employee.Title,
                     @isFullTime = employee.IsFullTime,
                     @insertedDate = employee.InsertedDate,
@@ -91,7 +111,6 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $" ,[Adress]" +
                 $" ,[email]" +
                 $" ,[PhoneNumber]" +
-                $" ,[WorkingHours]" +
                 $" ,[Title]" +
                 $" ,[IsFullTime])" +
                 $",[InsertedDate]" +
@@ -104,7 +123,6 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $",@adress " +
                 $",@email " +
                 $",@phoneNumber " +
-                $",@workingHours " +
                 $",@title  " +
                 $",@isFullTime" +
                 $",@insertedDate" +
@@ -118,10 +136,9 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 {
                     @firstName = employee.FirstName,
                     @lastName = employee.LastName,
-                    @adress = employee.Address,
+                    @adress = employee.Adress,
                     @email = employee.Email,
                     @phoneNumber = employee.PhoneNumber,
-                    @workingHours = employee.WorkingHours,
                     @title = employee.Title,
                     @isFullTime = employee.IsFullTime,
                     @insertedDate = employee.InsertedDate,

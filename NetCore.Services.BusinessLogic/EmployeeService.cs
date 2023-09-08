@@ -27,12 +27,15 @@ namespace NetCore.Services.BusinessLogic
                     Id = x.Id,
                     FirstName = x.FirstName,
                     LastName = x.LastName,
-                    Address = x.Address,
+                    Address = x.Adress,
                     Email = x.Email,
                     PhoneNumber = x.PhoneNumber,
-                    WorkingHours = x.WorkingHours,
                     Title = x.Title,
-                    IsFullTime = x.IsFullTime
+                    IsFullTime = x.IsFullTime,
+                    InsertedDate = x.InsertedDate,
+                    UpdatedDate = x.UpdatedDate,
+                    HourRate = x.HourRate,
+                    Active = x.Active
                 });
         }
 
@@ -44,12 +47,56 @@ namespace NetCore.Services.BusinessLogic
                     Id = x.Id,
                     FirstName = x.FirstName,
                     LastName = x.LastName,
-                    Address = x.Address,
+                    Address = x.Adress,
                     Email = x.Email,
                     PhoneNumber = x.PhoneNumber,
-                    WorkingHours = x.WorkingHours,
                     Title = x.Title,
-                    IsFullTime = x.IsFullTime
+                    IsFullTime = x.IsFullTime,
+                    InsertedDate = x.InsertedDate,
+                    UpdatedDate = x.UpdatedDate,
+                    HourRate = x.HourRate,
+                    Active = x.Active
+                });
+        }
+
+        public async Task<EmployeeDTO> GetAll(int Id)
+        {
+            var result = await _unitOfWork.EmployeeRepository.GetEmployeeById(Id);
+            return (
+                new EmployeeDTO()
+                {
+                    Id = result.Id,
+                    FirstName = result.FirstName,
+                    LastName = result.LastName,
+                    Address = result.Adress,
+                    Email = result.Email,
+                    PhoneNumber = result.PhoneNumber,
+                    Title = result.Title,
+                    IsFullTime = result.IsFullTime,
+                    InsertedDate = result.InsertedDate,
+                    UpdatedDate = result.UpdatedDate,
+                    HourRate = result.HourRate,
+                    Active = result.Active
+                });
+        }
+        public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int Id)
+        {
+            var result = await _unitOfWork.EmployeeRepository.GetEmployeeByWeekPeriodId(Id);
+            return (
+                new EmployeeDTO()
+                {
+                    Id = result.Id,
+                    FirstName = result.FirstName,
+                    LastName = result.LastName,
+                    Address = result.Adress,
+                    Email = result.Email,
+                    PhoneNumber = result.PhoneNumber,
+                    Title = result.Title,
+                    IsFullTime = result.IsFullTime,
+                    InsertedDate = result.InsertedDate,
+                    UpdatedDate = result.UpdatedDate,
+                    HourRate = result.HourRate,
+                    Active = result.Active
                 });
         }
 

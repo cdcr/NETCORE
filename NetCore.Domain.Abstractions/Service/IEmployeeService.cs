@@ -15,5 +15,7 @@ namespace NetCore.Domain.Abstractions.Service
         void AddEmployee(EmployeeDTO employee);
         void UpdateEmployee(EmployeeDTO employee);
         void RemoveEmployee(EmployeeDTO employee);
+        Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int Id);
+        Task<EmployeeDTO> GetEmployeeById(int Id);
     }
 }

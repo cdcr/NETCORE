@@ -25,8 +25,19 @@ namespace Netcore.Controllers
         [HttpGet]
         public async Task<IEnumerable<EmployeeDTO>> GetAllEmployees()
         {
-            
             return await _emloyeeService.GetAll();
+        }
+
+        [HttpGet]
+        public async Task<EmployeeDTO> GetEmployeeById(int Id)
+        {
+            return await _emloyeeService.GetEmployeeById(Id);
+        }
+
+        [HttpGet]
+        public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int WeekPeriodId)
+        {
+            return await _emloyeeService.GetEmployeeByWeekPeriodId(WeekPeriodId);
         }
 
         [HttpPost]
