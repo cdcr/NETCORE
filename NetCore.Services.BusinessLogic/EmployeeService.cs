@@ -31,7 +31,6 @@ namespace NetCore.Services.BusinessLogic
                     Address = x.Address,
                     Email = x.Email,
                     PhoneNumber = x.PhoneNumber,
-                    WorkingHours = x.WorkingHours,
                     Title = x.Title,
                     IsFullTime = x.IsFullTime
                 });
@@ -48,7 +47,6 @@ namespace NetCore.Services.BusinessLogic
                     Address = x.Address,
                     Email = x.Email,
                     PhoneNumber = x.PhoneNumber,
-                    WorkingHours = x.WorkingHours,
                     Title = x.Title,
                     IsFullTime = x.IsFullTime
                 });

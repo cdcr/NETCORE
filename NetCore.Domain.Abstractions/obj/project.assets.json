@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
+      "projectUniqueName": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
       "projectName": "NetCore.Domain.Abstractions",
-      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
+      "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\NetCore.Domain.Abstractions\\obj\\",
+      "outputPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -60,8 +60,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj"
+            "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
+              "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj"
             }
           }
         }

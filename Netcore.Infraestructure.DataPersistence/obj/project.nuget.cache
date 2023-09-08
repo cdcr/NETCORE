@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kx38cGjG3y4k54KlmFN1bYvWFDbkAZrADGe3n4ECBK5cLBWFnvEKWV1BAOnYcy3CyqHBSm9RDxTdSVFSnMnBWg==",
+  "dgSpecHash": "tDJrpzrcD8ATcmd4FDGLQzV+IZrAJeLka0ss8ahRe8WDEpmuRC5eXSZld0+NPoeVuPVozm+D8QMtBN9XcwWAIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj",
+  "projectFilePath": "D:\\REPOS\\CourseTCC\\NETCORE\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

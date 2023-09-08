@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fm/xa7B8maH0eXTMYXISPcc2u74+wfvKBFm+6NBGhdsbY+AasaAoZtP7ckWKPOwcPuFXsTcrYBZXvliuIohj2g==",
+  "dgSpecHash": "9wQNLKsFj9pQnJitttkJ6JWrxy6tMcKJJQlKg1MH+I76voR7hh2DbkA75y9qMl45HF7jMvrqwm5M32ausfotvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\NetCoreAPI\\Netcore\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj",
+  "projectFilePath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
