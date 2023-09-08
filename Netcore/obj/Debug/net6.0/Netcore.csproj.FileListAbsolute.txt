@@ -174,7 +174,6 @@ D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.GeneratedMSBuildEdit
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.AssemblyInfoInputs.cache
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.AssemblyInfo.cs
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.csproj.CoreCompileInputs.cache
-D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.MvcApplicationPartsAssemblyInfo.cs
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.MvcApplicationPartsAssemblyInfo.cache
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\staticwebassets\msbuild.Netcore.Microsoft.AspNetCore.StaticWebAssets.props
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\staticwebassets\msbuild.build.Netcore.props

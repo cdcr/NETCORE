@@ -21,12 +21,12 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         }
         public async Task<Employee> GetEmployeeByWeekPeriodId(int Id)
         {
-            var result = (await ExecuteQuery<Employee>(
-                $"SELECT * " +
-                $"FROM {DatabaseTables.Employee} as E" +
-                $"LEFT JOIN {DatabaseTables.WeekPeriod} as WP " +
-                $"ON E.Id = WP.EmployeeId" +
-                $"AND WP.EmployeeId = {Id}")).FirstOrDefault();
+            var query = $"SELECT E.Id,E.[FirstName],E.[LastName],E.[Adress],E.[Email],E.[PhoneNumber],E.[Title],E.[IsFullTime],E.[InsertedDate],E.[UpdatedDate],E.[HourRate],E.[Active] " +
+                $"FROM {DatabaseTables.Employee} AS E " +
+                $"INNER JOIN {DatabaseTables.WeekPeriod} AS WP " +
+                $"ON E.Id = WP.EmployeeId " +
+                $"AND WP.EmployeeId = {Id} ";
+            var result = (await ExecuteQuery<Employee>(query)).FirstOrDefault();
             return result;
 
         }
@@ -105,18 +105,18 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         }
         public async Task AddEmployee(Employee employee)
         {
-            var query = $"INSERT {DatabaseTables.Employee} " +
+            var query = $"INSERT INTO {DatabaseTables.Employee} " +
                 $" ([FirstName]" +
-                $" ,[LastName]" +
-                $" ,[Adress]" +
-                $" ,[email]" +
-                $" ,[PhoneNumber]" +
-                $" ,[Title]" +
-                $" ,[IsFullTime])" +
+                $",[LastName]" +
+                $",[Adress]" +
+                $",[email]" +
+                $",[PhoneNumber]" +
+                $",[Title]" +
+                $",[IsFullTime]" +
                 $",[InsertedDate]" +
                 $",[UpdatedDate] " +
                 $",[HourRate]" +
-                $",[Active] " +
+                $",[Active]) " +
                 $" VALUES" +
                 $"(@firstName" +
                 $",@lastName " +

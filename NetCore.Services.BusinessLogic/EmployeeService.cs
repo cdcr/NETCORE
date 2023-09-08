@@ -59,7 +59,7 @@ namespace NetCore.Services.BusinessLogic
                 });
         }
 
-        public async Task<EmployeeDTO> GetAll(int Id)
+        public async Task<EmployeeDTO> GetEmployeeById(int Id)
         {
             var result = await _unitOfWork.EmployeeRepository.GetEmployeeById(Id);
             return (
@@ -82,6 +82,8 @@ namespace NetCore.Services.BusinessLogic
         public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int Id)
         {
             var result = await _unitOfWork.EmployeeRepository.GetEmployeeByWeekPeriodId(Id);
+            if (result == null)
+                return new EmployeeDTO();
             return (
                 new EmployeeDTO()
                 {

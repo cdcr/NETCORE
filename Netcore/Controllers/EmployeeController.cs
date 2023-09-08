@@ -29,12 +29,14 @@ namespace Netcore.Controllers
         }
 
         [HttpGet]
+        [Route("GetEmployeeById")]
         public async Task<EmployeeDTO> GetEmployeeById(int Id)
         {
             return await _emloyeeService.GetEmployeeById(Id);
         }
 
         [HttpGet]
+        [Route("GetEmployeeByWeekPeriodId")]
         public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int WeekPeriodId)
         {
             return await _emloyeeService.GetEmployeeByWeekPeriodId(WeekPeriodId);
