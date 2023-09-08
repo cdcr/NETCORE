@@ -8,7 +8,7 @@ namespace NetCore.Infraestructure.DataPersistence
         public EmployeeContext(DbContextOptions<EmployeeContext> options) : base(options)
         {
         }
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employee { get; set; }
 
     }
 }

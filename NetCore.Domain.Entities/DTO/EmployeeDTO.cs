@@ -11,5 +11,13 @@
         public int WorkingHours { get; set; }
         public string Title { get; set; }
         public bool IsFullTime { get; set; }
+        public DateTime InsertedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public decimal HourRate { get; set; }
+        public bool Active { get; set; }
+        public decimal? Bonus { get; set; }
+        public decimal? WeekPayment { get; set; }
+        public decimal? WeekPaymentTotal { get; set; }
+
     }
 }

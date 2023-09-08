@@ -3,6 +3,6 @@
     public class DatabaseTables
     {
         // DB Objects
-        public const string Employee = "[dbo].[Employees]";
+        public const string Employee = "[dbo].[Employee]";
     }
 }

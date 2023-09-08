@@ -28,16 +28,16 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
             switch (field)
             {
                 case "firstName":
-                    Choseen = "first_name";
+                    Choseen = "FirstName";
                     break;
                 case "lastName":
-                    Choseen = "last_name";
+                    Choseen = "LastName";
                     break;
-                case "address":
-                    Choseen = "address";
+                case "Adress":
+                    Choseen = "Adress";
                     break;
                 case "title":
-                    Choseen = "title";
+                    Choseen = "Title";
                     break;
                 default: 
                     Choseen = "Id";
@@ -54,39 +54,50 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         {
             await ExecuteQuery(
                 $"UPDATE {DatabaseTables.Employee}" +
-                $" SET [first_name] = @firstName" +
-                $",[last_name] = @lastName " +
-                $",[address] = @adress " +
+                $" SET [FirstName] = @firstName" +
+                $",[LastName] = @lastName " +
+                $",[Adress] = @adress " +
                 $",[email] = @email " +
-                $",[phone_number] = @phoneNumber " +
-                $",[working_hours] = @workingHours " +
-                $",[title] = @title  " +
-                $",[is_full_time] = @isFullTime" +
+                $",[PhoneNumber] = @phoneNumber " +
+                $",[WorkingHours] = @workingHours " +
+                $",[Title] = @title  " +
+                $",[IsFullTime] = @isFullTime" +
+                $",[InsertedDate] = @insertedDate" +
+                $",[UpdatedDate] = @updatedDate" +
+                $",[HourRate] = @hourRate" +
+                $",[Active] = @active" +
                 $" WHERE [Id] = {employee.Id}",
                 new
                 {
-                    @firstName = employee.first_name,
-                    @lastName = employee.last_name,
-                    @adress = employee.address,
-                    @email = employee.email,
-                    @phoneNumber = employee.phone_number,
-                    @workingHours = employee.working_hours,
-                    @title = employee.title,
-                    @isFullTime = employee.is_full_time
+                    @firstName = employee.FirstName,
+                    @lastName = employee.LastName,
+                    @adress = employee.Address,
+                    @email = employee.Email,
+                    @phoneNumber = employee.PhoneNumber,
+                    @workingHours = employee.WorkingHours,
+                    @title = employee.Title,
+                    @isFullTime = employee.IsFullTime,
+                    @insertedDate = employee.InsertedDate,
+                    @updatedDate = employee.UpdatedDate,
+                    @hourRate = employee.HourRate,
+                    @active = employee.Active
                 });
         }
         public async Task AddEmployee(Employee employee)
         {
-            await ExecuteQuery(
-                $"INSERT {DatabaseTables.Employee} " +
-                $" ([first_name]" +
-                $" ,[last_name]" +
-                $" ,[address]" +
+            var query = $"INSERT {DatabaseTables.Employee} " +
+                $" ([FirstName]" +
+                $" ,[LastName]" +
+                $" ,[Adress]" +
                 $" ,[email]" +
-                $" ,[phone_number]" +
-                $" ,[working_hours]" +
-                $" ,[title]" +
-                $" ,[is_full_time])" +
+                $" ,[PhoneNumber]" +
+                $" ,[WorkingHours]" +
+                $" ,[Title]" +
+                $" ,[IsFullTime])" +
+                $",[InsertedDate]" +
+                $",[UpdatedDate] " +
+                $",[HourRate]" +
+                $",[Active] " +
                 $" VALUES" +
                 $"(@firstName" +
                 $",@lastName " +
@@ -95,17 +106,28 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $",@phoneNumber " +
                 $",@workingHours " +
                 $",@title  " +
-                $",@isFullTime)",
+                $",@isFullTime" +
+                $",@insertedDate" +
+                $",@updatedDate" +
+                $",@hourRate" +
+                $",@active" +
+                $")";
+            await ExecuteQuery(
+                query,
                 new
                 {
-                    @firstName = employee.first_name,
-                    @lastName = employee.last_name,
-                    @adress = employee.address,
-                    @email = employee.email,
-                    @phoneNumber = employee.phone_number,
-                    @workingHours = employee.working_hours,
-                    @title = employee.title,
-                    @isFullTime = employee.is_full_time
+                    @firstName = employee.FirstName,
+                    @lastName = employee.LastName,
+                    @adress = employee.Address,
+                    @email = employee.Email,
+                    @phoneNumber = employee.PhoneNumber,
+                    @workingHours = employee.WorkingHours,
+                    @title = employee.Title,
+                    @isFullTime = employee.IsFullTime,
+                    @insertedDate = employee.InsertedDate,
+                    @updatedDate = employee.UpdatedDate,
+                    @hourRate = employee.HourRate,
+                    @active = employee.Active
                 });
         }
 

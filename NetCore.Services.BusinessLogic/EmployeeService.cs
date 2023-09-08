@@ -25,14 +25,14 @@ namespace NetCore.Services.BusinessLogic
                 .Select(x => new EmployeeDTO()
                 {
                     Id = x.Id,
-                    FirstName = x.first_name,
-                    LastName = x.last_name,
-                    Address = x.address,
-                    Email = x.email,
-                    PhoneNumber = x.phone_number,
-                    WorkingHours = x.working_hours,
-                    Title = x.title,
-                    IsFullTime = x.is_full_time
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Address = x.Address,
+                    Email = x.Email,
+                    PhoneNumber = x.PhoneNumber,
+                    WorkingHours = x.WorkingHours,
+                    Title = x.Title,
+                    IsFullTime = x.IsFullTime
                 });
         }
 
@@ -42,14 +42,14 @@ namespace NetCore.Services.BusinessLogic
                 .Select(x => new EmployeeDTO()
                 {
                     Id = x.Id,
-                    FirstName = x.first_name,
-                    LastName = x.last_name,
-                    Address = x.address,
-                    Email = x.email,
-                    PhoneNumber = x.phone_number,
-                    WorkingHours = x.working_hours,
-                    Title = x.title,
-                    IsFullTime = x.is_full_time
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Address = x.Address,
+                    Email = x.Email,
+                    PhoneNumber = x.PhoneNumber,
+                    WorkingHours = x.WorkingHours,
+                    Title = x.Title,
+                    IsFullTime = x.IsFullTime
                 });
         }
 
