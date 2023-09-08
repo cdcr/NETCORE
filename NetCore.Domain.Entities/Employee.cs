@@ -1,5 +1,4 @@
 ﻿using NetCore.Domain.Entities.DTO;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NetCore.Domain.Entities
 {

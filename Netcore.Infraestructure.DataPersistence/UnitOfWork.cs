@@ -12,9 +12,11 @@ namespace NetCore.Infraestructure.DataPersistence
         {
             _dapperContext = dapperContext; 
             EmployeeRepository = new EmployeeRepository(_dapperContext);
+            UserRepository = new UserRepository(_dapperContext);
         }
 
 
         public IEmployeeRepository EmployeeRepository { get; private set; }
+        public IUserRepository UserRepository { get; private set; }
     }
 }
