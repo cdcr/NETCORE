@@ -22,3 +22,15 @@ D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Doma
 D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\refint\NetCore.Domain.Entities.dll
 D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.pdb
 D:\REPOS\CourseTCC\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\ref\NetCore.Domain.Entities.dll
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\bin\Debug\net6.0\NetCore.Domain.Entities.deps.json
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\bin\Debug\net6.0\NetCore.Domain.Entities.dll
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\bin\Debug\net6.0\NetCore.Domain.Entities.pdb
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.csproj.AssemblyReference.cache
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.AssemblyInfoInputs.cache
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.AssemblyInfo.cs
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.csproj.CoreCompileInputs.cache
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.dll
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\refint\NetCore.Domain.Entities.dll
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\NetCore.Domain.Entities.pdb
+C:\repos2023\ChallengeEmployee2\NETCORE\NetCore.Domain.Entities\obj\Debug\net6.0\ref\NetCore.Domain.Entities.dll

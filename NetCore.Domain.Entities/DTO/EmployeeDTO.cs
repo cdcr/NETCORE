@@ -9,7 +9,7 @@
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public int WorkingHours { get; set; }
-        public string Title { get; set; }
+        public string Profile { get; set; }
         public bool IsFullTime { get; set; }
         public DateTime InsertedDate { get; set; }
         public DateTime UpdatedDate { get; set; }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NetCore.Domain.Abstractions.Service;
+using NetCore.Domain.Entities;
 using NetCore.Domain.Entities.Constants;
 using NetCore.Domain.Entities.DTO;
 
@@ -36,10 +37,10 @@ namespace Netcore.Controllers
         }
 
         [HttpGet]
-        [Route("GetEmployeeByWeekPeriodId")]
-        public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int WeekPeriodId)
+        [Route("GetEmployeeByEmployeeAndWeekPeriod")]
+        public async Task<EmployeeWeekPeriodDTO> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId)
         {
-            return await _emloyeeService.GetEmployeeByWeekPeriodId(WeekPeriodId);
+            return await _emloyeeService.GetEmployeeByEmployeeAndWeekPeriod(weekPeriodId, employeeId);
         }
 
         [HttpPost]

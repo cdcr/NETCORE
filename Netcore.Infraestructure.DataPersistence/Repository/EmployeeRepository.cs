@@ -2,6 +2,7 @@
 using NetCore.Domain.Abstractions.Repository;
 using NetCore.Domain.Entities;
 using NetCore.Domain.Entities.Constants;
+using NetCore.Domain.Entities.DTO;
 
 namespace NetCore.Infraestructure.DataPersistence.Repository
 {
@@ -19,16 +20,15 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
             return result;
 
         }
-        public async Task<Employee> GetEmployeeByWeekPeriodId(int Id)
+        public async Task<EmployeeWeekPeriod> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId)
         {
-            var query = $"SELECT E.Id,E.[FirstName],E.[LastName],E.[Adress],E.[Email],E.[PhoneNumber],E.[Title],E.[IsFullTime],E.[InsertedDate],E.[UpdatedDate],E.[HourRate],E.[Active] " +
+            var query = $"SELECT E.Id,E.[FirstName],E.[LastName],E.[Address],E.[Email],E.[PhoneNumber],E.[Profile],E.[IsFullTime],E.[HourRate],E.[Active],E.[InsertedDate],E.[UpdatedDate], WP.WorkedHours" +
                 $"FROM {DatabaseTables.Employee} AS E " +
                 $"INNER JOIN {DatabaseTables.WeekPeriod} AS WP " +
-                $"ON E.Id = WP.EmployeeId " +
-                $"AND WP.EmployeeId = {Id} ";
-            var result = (await ExecuteQuery<Employee>(query)).FirstOrDefault();
+                $"ON E.Id = WP.EmployeeId AND WP.Id = {weekPeriodId} " + 
+                $"WHERE E.ID = {employeeId}";                
+            var result = (await ExecuteQuery<EmployeeWeekPeriod>(query)).FirstOrDefault();
             return result;
-
         }
 
         public async Task<Employee> GetEmployeeById(int Id)
@@ -54,11 +54,11 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 case "lastName":
                     Choseen = "LastName";
                     break;
-                case "Adress":
-                    Choseen = "Adress";
+                case "Address":
+                    Choseen = "Address";
                     break;
-                case "title":
-                    Choseen = "Title";
+                case "profile":
+                    Choseen = "Profile";
                     break;
                 default: 
                     Choseen = "Id";
@@ -77,11 +77,11 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $"UPDATE {DatabaseTables.Employee}" +
                 $" SET [FirstName] = @firstName" +
                 $",[LastName] = @lastName " +
-                $",[Adress] = @adress " +
+                $",[Address] = @address " +
                 $",[email] = @email " +
                 $",[PhoneNumber] = @phoneNumber " +
                 $",[WorkingHours] = @workingHours " +
-                $",[Title] = @title  " +
+                $",[Profile] = @profile  " +
                 $",[IsFullTime] = @isFullTime" +
                 $",[InsertedDate] = @insertedDate" +
                 $",[UpdatedDate] = @updatedDate" +
@@ -92,10 +92,10 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 {
                     @firstName = employee.FirstName,
                     @lastName = employee.LastName,
-                    @adress = employee.Adress,
+                    @address = employee.Address,
                     @email = employee.Email,
                     @phoneNumber = employee.PhoneNumber,
-                    @title = employee.Title,
+                    @profile = employee.Profile,
                     @isFullTime = employee.IsFullTime,
                     @insertedDate = employee.InsertedDate,
                     @updatedDate = employee.UpdatedDate,
@@ -108,10 +108,10 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
             var query = $"INSERT INTO {DatabaseTables.Employee} " +
                 $" ([FirstName]" +
                 $",[LastName]" +
-                $",[Adress]" +
+                $",[Address]" +
                 $",[email]" +
                 $",[PhoneNumber]" +
-                $",[Title]" +
+                $",[Profile]" +
                 $",[IsFullTime]" +
                 $",[InsertedDate]" +
                 $",[UpdatedDate] " +
@@ -120,10 +120,10 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $" VALUES" +
                 $"(@firstName" +
                 $",@lastName " +
-                $",@adress " +
+                $",@address " +
                 $",@email " +
                 $",@phoneNumber " +
-                $",@title  " +
+                $",@profile  " +
                 $",@isFullTime" +
                 $",@insertedDate" +
                 $",@updatedDate" +
@@ -136,10 +136,10 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 {
                     @firstName = employee.FirstName,
                     @lastName = employee.LastName,
-                    @adress = employee.Adress,
+                    @address = employee.Address,
                     @email = employee.Email,
                     @phoneNumber = employee.PhoneNumber,
-                    @title = employee.Title,
+                    @profile = employee.Profile,
                     @isFullTime = employee.IsFullTime,
                     @insertedDate = employee.InsertedDate,
                     @updatedDate = employee.UpdatedDate,

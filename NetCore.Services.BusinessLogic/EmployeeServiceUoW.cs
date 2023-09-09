@@ -1,28 +1,26 @@
 ﻿using NetCore.Domain.Abstractions.Repository;
-using NetCore.Domain.Abstractions.Service;
-using NetCore.Domain.Entities;
-using NetCore.Domain.Entities.Abstractions;
 using NetCore.Domain.Entities.DTO;
+using NetCore.Domain.Entities;
 
 namespace NetCore.Services.BusinessLogic
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeeServiceUoW
     {
-        private IEmployeeRepository _employeeRepository;
-        public EmployeeService(IEmployeeRepository employeeRepository)
+        private IUnitOfWork _unitOfWork;
+        public EmployeeServiceUoW(IUnitOfWork unitOfWork)
         {
-            _employeeRepository = employeeRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public void AddEmployee(EmployeeDTO employeeDTO)
         {
             var newEmployee = new Employee(employeeDTO);
-            _employeeRepository.AddEmployee(newEmployee);
+            _unitOfWork.EmployeeRepository.AddEmployee(newEmployee);
         }
 
         public async Task<IEnumerable<EmployeeDTO>> GeByField(string field, string value)
         {
-            return (await _employeeRepository.GetByField(field, value))
+            return (await _unitOfWork.EmployeeRepository.GetByField(field, value))
                 .Select(x => new EmployeeDTO()
                 {
                     Id = x.Id,
@@ -42,7 +40,7 @@ namespace NetCore.Services.BusinessLogic
 
         public async Task<IEnumerable<EmployeeDTO>> GetAll()
         {
-            return (await _employeeRepository.GetAllEmployees())
+            return (await _unitOfWork.EmployeeRepository.GetAllEmployees())
                 .Select(x => new EmployeeDTO()
                 {
                     Id = x.Id,
@@ -62,8 +60,8 @@ namespace NetCore.Services.BusinessLogic
 
         public async Task<EmployeeDTO> GetEmployeeById(int Id)
         {
-            var result = await _employeeRepository.GetEmployeeById(Id);
-            return 
+            var result = await _unitOfWork.EmployeeRepository.GetEmployeeById(Id);
+            return (
                 new EmployeeDTO()
                 {
                     Id = result.Id,
@@ -78,61 +76,41 @@ namespace NetCore.Services.BusinessLogic
                     UpdatedDate = result.UpdatedDate,
                     HourRate = result.HourRate,
                     Active = result.Active
-                };
+                });
         }
-
-        private string ValidateDomain(string email) 
+        public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int weekPeriodId, int employeeId)
         {
-            return email.ToLower().Contains("entropyzero.com") ? email : "no email";
-        }
-
-        private string ValidateLastName(string lastName)
-        {
-            return !string.IsNullOrWhiteSpace(lastName) ? lastName : "no lastname";
-        }
-        private string ValidatePhoneNumber(string phoneNumber)
-        {
-            return !string.IsNullOrWhiteSpace(phoneNumber) ? phoneNumber : "8002472020";
-        }
-
-
-        public async Task<EmployeeWeekPeriodDTO> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId)
-        {
-            var result = await _employeeRepository.GetEmployeeByEmployeeAndWeekPeriod(weekPeriodId, employeeId);
+            var result = await _unitOfWork.EmployeeRepository.GetEmployeeByEmployeeAndWeekPeriod(weekPeriodId, employeeId);
             if (result == null)
-                return new EmployeeWeekPeriodDTO();
+                return new EmployeeDTO();
             return (
-                new EmployeeWeekPeriodDTO()
+                new EmployeeDTO()
                 {
                     Id = result.Id,
                     FirstName = result.FirstName,
-                    LastName = ValidateLastName(result.LastName),
+                    LastName = result.LastName,
                     Address = result.Address,
-                    Email = ValidateDomain(result.Email),
-                    PhoneNumber = ValidatePhoneNumber(result.PhoneNumber),
+                    Email = result.Email,
+                    PhoneNumber = result.PhoneNumber,
                     Profile = result.Profile,
                     IsFullTime = result.IsFullTime,
-                    HourRate = result.HourRate,
-                    Active = result.Active,
                     InsertedDate = result.InsertedDate,
                     UpdatedDate = result.UpdatedDate,
-                    WorkedHours = result.WorkedHours,
-                    Bonus = result.WorkedHours > 40 ? 100 : 0,
-                    WeekPayment = (result.HourRate * result.WorkedHours),
-                    WeekTotalPayment = (result.WorkedHours > 40 ? 100 : 0) + (result.HourRate * result.WorkedHours)
+                    HourRate = result.HourRate,
+                    Active = result.Active
                 });
         }
 
         public void RemoveEmployee(EmployeeDTO employeeDTO)
         {
             var newEmployee = new Employee(employeeDTO);
-            _employeeRepository.RemoveEmployee(newEmployee.Id);
+            _unitOfWork.EmployeeRepository.RemoveEmployee(newEmployee.Id);
         }
 
         public void UpdateEmployee(EmployeeDTO employeeDTO)
         {
             var newEmployee = new Employee(employeeDTO);
-            _employeeRepository.UpdateEmployee(newEmployee);
+            _unitOfWork.EmployeeRepository.UpdateEmployee(newEmployee);
         }
     }
 }

@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj": {}
+    "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj": {}
   },
   "projects": {
-    "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj": {
+    "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
+        "projectUniqueName": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
         "projectName": "NetCore.Domain.Abstractions",
-        "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\obj\\",
+        "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\pjmfb\\.nuget\\packages\\",
+        "outputPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\pjmfb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://gitlab.com/api/v4/projects/25490890/packages/nuget/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
-                "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj"
+              "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
+                "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj"
               }
             }
           }
@@ -68,22 +64,17 @@
         }
       }
     },
-    "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
+    "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj",
+        "projectUniqueName": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj",
         "projectName": "NetCore.Domain.Entities",
-        "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Entities\\obj\\",
+        "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj",
+        "packagesPath": "C:\\Users\\pjmfb\\.nuget\\packages\\",
+        "outputPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\pjmfb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +82,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://gitlab.com/api/v4/projects/25490890/packages/nuget/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -134,22 +126,17 @@
         }
       }
     },
-    "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj": {
+    "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj",
-        "projectName": "NetCore.Services.BusinessLogic",
-        "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Services.BusinessLogic\\obj\\",
+        "projectUniqueName": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj",
+        "projectName": "NetCore.Infraestructure.DataPersistence",
+        "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj",
+        "packagesPath": "C:\\Users\\pjmfb\\.nuget\\packages\\",
+        "outputPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\Netcore.Infraestructure.DataPersistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\pjmfb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -157,14 +144,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://gitlab.com/api/v4/projects/25490890/packages/nuget/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj": {
-                "projectPath": "D:\\REPOS\\CourseTCC\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj"
+              "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj": {
+                "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj"
+              },
+              "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj": {
+                "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Entities\\NetCore.Domain.Entities.csproj"
               }
             }
           }
@@ -178,6 +169,121 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.151, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj",
+        "projectName": "NetCore.Services.BusinessLogic",
+        "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Services.BusinessLogic\\NetCore.Services.BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\pjmfb\\.nuget\\packages\\",
+        "outputPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Services.BusinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pjmfb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://gitlab.com/api/v4/projects/25490890/packages/nuget/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj": {
+                "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\NetCore.Domain.Abstractions\\NetCore.Domain.Abstractions.csproj"
+              },
+              "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj": {
+                "projectPath": "C:\\repos2023\\ChallengeEmployee2\\NETCORE\\Netcore.Infraestructure.DataPersistence\\NetCore.Infraestructure.DataPersistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.TestPlatform.TestHost": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
