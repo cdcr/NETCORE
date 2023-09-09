@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NetCore.Domain.Abstractions.Repository;
+﻿using NetCore.Domain.Abstractions.Repository;
 using NetCore.Infraestructure.DataPersistence.Repository;
 
 namespace NetCore.Infraestructure.DataPersistence

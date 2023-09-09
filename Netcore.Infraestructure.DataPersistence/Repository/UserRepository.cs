@@ -40,6 +40,15 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
             var query = $"DELETE FROM {DatabaseTables.User} WHERE [Id] = {Id}";
             var result = (await ExecuteQuery<User>(query)).ToList();
         }
+        public async Task<string> GetPasswordByUserName(string userName)
+        {
+            var query = 
+                $"SELECT [Password] " +
+                $" FROM {DatabaseTables.User} "+
+                $" WHERE [UserName] LIKE %'{userName}'%";
+            var result = (await ExecuteQuery<string>(query)).FirstOrDefault();
+            return result;
+        }
 
         public async Task UpdateUser(User user)
         {

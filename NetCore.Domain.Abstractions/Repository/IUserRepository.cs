@@ -13,5 +13,6 @@ namespace NetCore.Domain.Abstractions.Repository
         Task RemoveUser(int Id);
         Task AddUser(User user);
         Task UpdateUser(User user);
+        Task<string> GetPasswordByUserName(string userName);
     }
 }

@@ -9,5 +9,6 @@ namespace NetCore.Domain.Abstractions.Repository
     public interface IUnitOfWork
     {
         IEmployeeRepository EmployeeRepository { get; }
+        IUserRepository UserRepository { get; }
     }
 }

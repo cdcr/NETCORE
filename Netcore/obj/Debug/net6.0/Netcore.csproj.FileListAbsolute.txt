@@ -189,3 +189,4 @@ D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\refint\Netcore.dll
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.pdb
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.genruntimeconfig.cache
 D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\ref\Netcore.dll
+D:\REPOS\CourseTCC\NETCORE\Netcore\obj\Debug\net6.0\Netcore.MvcApplicationPartsAssemblyInfo.cs

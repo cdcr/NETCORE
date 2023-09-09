@@ -6,57 +6,41 @@ namespace Netcore.Controllers
 {
     public class UserController : Controller
     {
-        private IUserService _emloyeeService;
-        public UserController(IUserService emloyeeService)
+        private IUserService _userService;
+        public UserController(IUserService userService)
         {
-            _emloyeeService = emloyeeService;
+            _userService = userService;
         }
 
-        [HttpGet]
-        [Route("Search")]
-        public async Task<IEnumerable<UserDTO>> GetUsersByField(string field, string value)
+        public async Task<bool> ValidateSession(string username, string password)
         {
-            return await _emloyeeService.GeByField(field, value);
+            return (await _userService.ValidateSession(username,password));
         }
 
         [HttpGet]
         public async Task<IEnumerable<UserDTO>> GetAllUsers()
         {
-            return await _emloyeeService.GetAll();
-        }
-
-        [HttpGet]
-        [Route("GetUserById")]
-        public async Task<UserDTO> GetUserById(int Id)
-        {
-            return await _emloyeeService.GetUserById(Id);
-        }
-
-        [HttpGet]
-        [Route("GetUserByWeekPeriodId")]
-        public async Task<UserDTO> GetUserByWeekPeriodId(int WeekPeriodId)
-        {
-            return await _emloyeeService.GetUserByWeekPeriodId(WeekPeriodId);
+            return await _userService.GetAllUsers();
         }
 
         [HttpPost]
-        public void AddUser(UserDTO employee)
+        public async void AddUser(UserDTO user)
         {
-            _emloyeeService.AddUser(employee);
+            await _userService.AddUser(user);
         }
 
         [HttpPut]
-        public void UpdateUser(UserDTO employee)
+        public async void UpdateUser(UserDTO user)
         {
 
-            _emloyeeService.UpdateUser(employee);
+            await _userService.UpdateUser(user);
         }
 
         [HttpDelete]
-        public void RemoveUser(UserDTO employee)
+        public void RemoveUser(int Id)
         {
 
-            _emloyeeService.RemoveUser(employee);
+            _userService.RemoveUser(Id);
         }
     }
 }

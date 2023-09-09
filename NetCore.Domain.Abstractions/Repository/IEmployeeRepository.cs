@@ -1,6 +1,5 @@
 ﻿
 using NetCore.Domain.Entities;
-using NetCore.Domain.Entities.Constants;
 
 namespace NetCore.Domain.Abstractions.Repository
 {
@@ -13,8 +12,6 @@ namespace NetCore.Domain.Abstractions.Repository
         Task UpdateEmployee(Employee employee);
         Task<Employee> GetEmployeeById(int Id);
         Task<Employee> GetEmployeeByWeekPeriodId(int Id);
-
-
 
     }
 }
