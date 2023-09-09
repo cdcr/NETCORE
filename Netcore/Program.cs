@@ -17,7 +17,6 @@ builder.Services.AddSingleton<ISystemInfo>(systemInfo);
 //optionsBuilder.UseSqlServer(systemInfo.ConnectionString);
 builder.Services.AddScoped<DapperContext>();
 //builder.Services.AddSingleton(optionsBuilder.Options);
-builder.Services.AddDbContext<EmployeeContext>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddTransient<IEmployeeService, EmployeeService>();
