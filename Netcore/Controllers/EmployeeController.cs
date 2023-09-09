@@ -38,7 +38,7 @@ namespace Netcore.Controllers
 
         [HttpGet]
         [Route("GetEmployeeByEmployeeAndWeekPeriod")]
-        public async Task<EmployeeWeekPeriodDTO> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId)
+        public async Task<EmployeeWeekPeriodDTO> GetEmployeeByEmployeeAndWeekPeriod(string weekPeriodId, int employeeId)
         {
             return await _emloyeeService.GetEmployeeByEmployeeAndWeekPeriod(weekPeriodId, employeeId);
         }
@@ -57,10 +57,10 @@ namespace Netcore.Controllers
         }
 
         [HttpDelete]
-        public void RemoveEmployee(EmployeeDTO employee)
+        public void RemoveEmployee(int employeeId)
         {
 
-            _emloyeeService.RemoveEmployee(employee);
+            _emloyeeService.RemoveEmployee(employeeId);
         }
     }
 

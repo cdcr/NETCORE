@@ -17,6 +17,7 @@ namespace NetCore.Services.BusinessLogic
         public void AddEmployee(EmployeeDTO employeeDTO)
         {
             var newEmployee = new Employee(employeeDTO);
+            newEmployee.Active = true;
             _employeeRepository.AddEmployee(newEmployee);
         }
 
@@ -96,7 +97,7 @@ namespace NetCore.Services.BusinessLogic
         }
 
 
-        public async Task<EmployeeWeekPeriodDTO> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId)
+        public async Task<EmployeeWeekPeriodDTO> GetEmployeeByEmployeeAndWeekPeriod(string weekPeriodId, int employeeId)
         {
             var result = await _employeeRepository.GetEmployeeByEmployeeAndWeekPeriod(weekPeriodId, employeeId);
             if (result == null)
@@ -123,10 +124,9 @@ namespace NetCore.Services.BusinessLogic
                 });
         }
 
-        public void RemoveEmployee(EmployeeDTO employeeDTO)
+        public void RemoveEmployee(int employeeId)
         {
-            var newEmployee = new Employee(employeeDTO);
-            _employeeRepository.RemoveEmployee(newEmployee.Id);
+            _employeeRepository.RemoveEmployee(employeeId);
         }
 
         public void UpdateEmployee(EmployeeDTO employeeDTO)

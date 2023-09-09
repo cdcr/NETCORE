@@ -16,11 +16,12 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         {
             var result = (await ExecuteQuery<Employee>(
                 $"SELECT *" +
-                $"  FROM {DatabaseTables.Employee}")).ToList();
+                $" FROM {DatabaseTables.Employee}" +
+                $" WHERE [Active] = 1 ")).ToList();
             return result;
 
         }
-        public async Task<EmployeeWeekPeriod> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId)
+        public async Task<EmployeeWeekPeriod> GetEmployeeByEmployeeAndWeekPeriod(string weekPeriodId, int employeeId)
         {
             var query = $"SELECT E.Id,E.[FirstName],E.[LastName],E.[Address],E.[Email],E.[PhoneNumber],E.[Profile],E.[IsFullTime],E.[HourRate],E.[Active],E.[InsertedDate],E.[UpdatedDate], WP.WorkedHours" +
                 $"FROM {DatabaseTables.Employee} AS E " +
@@ -73,21 +74,21 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
 
         public async Task UpdateEmployee(Employee employee)
         {
-            await ExecuteQuery(
+            var query =
                 $"UPDATE {DatabaseTables.Employee}" +
                 $" SET [FirstName] = @firstName" +
                 $",[LastName] = @lastName " +
                 $",[Address] = @address " +
                 $",[email] = @email " +
                 $",[PhoneNumber] = @phoneNumber " +
-                $",[WorkingHours] = @workingHours " +
                 $",[Profile] = @profile  " +
                 $",[IsFullTime] = @isFullTime" +
                 $",[InsertedDate] = @insertedDate" +
                 $",[UpdatedDate] = @updatedDate" +
                 $",[HourRate] = @hourRate" +
                 $",[Active] = @active" +
-                $" WHERE [Id] = {employee.Id}",
+                $" WHERE [Id] = {employee.Id}";
+            await ExecuteQuery(query,
                 new
                 {
                     @firstName = employee.FirstName,
@@ -151,7 +152,8 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         public async Task RemoveEmployee(int Id)
         {
             await ExecuteQuery(
-                $"DELETE FROM {DatabaseTables.Employee}" +
+                $"UPDATE {DatabaseTables.Employee}" +
+                $"SET [Active] = 0 " +
                 $"WHERE [Id] = {Id}");
         }
     }

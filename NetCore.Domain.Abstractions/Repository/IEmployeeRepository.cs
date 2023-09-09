@@ -11,7 +11,7 @@ namespace NetCore.Domain.Abstractions.Repository
         Task AddEmployee(Employee employee);
         Task UpdateEmployee(Employee employee);
         Task<Employee> GetEmployeeById(int Id);
-        Task<EmployeeWeekPeriod> GetEmployeeByEmployeeAndWeekPeriod(int weekPeriodId, int employeeId);
+        Task<EmployeeWeekPeriod> GetEmployeeByEmployeeAndWeekPeriod(string weekPeriodId, int employeeId);
 
     }
 }
