@@ -387,3 +387,5 @@ C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\bin\Debug\net6.0\Microsoft.Exten
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\bin\Debug\net6.0\System.Web.Cors.dll
+C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.MvcApplicationPartsAssemblyInfo.cs

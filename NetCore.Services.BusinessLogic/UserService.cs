@@ -63,18 +63,21 @@ namespace NetCore.Services.BusinessLogic
 
         public static string Decrypt( string toDecrypt)
         {
-            string result = string.Empty;
-            byte[] decrypted = Convert.FromBase64String(toDecrypt);
-            result = System.Text.Encoding.Unicode.GetString(decrypted);
-            return result;
+            //string result = string.Empty;
+            //byte[] decrypted = Convert.FromBase64String(toDecrypt);
+            //result = System.Text.Encoding.Unicode.GetString(decrypted);
+            //return result;
+            return (toDecrypt.Replace("abcd",""));
         }
 
         public static string Encrypt(string toEncrypt)
         {
-            string result = string.Empty;
-            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(toEncrypt);
-            result = Convert.ToBase64String(encryted);
-            return result;
+            //string result = string.Empty;
+            //byte[] encryted = System.Text.Encoding.Unicode.GetBytes(toEncrypt);
+            //result = Convert.ToBase64String(encryted);
+            //return result;
+            return (toEncrypt + "abcd");
         }
+
     }
 }

@@ -366,6 +366,18 @@
               "target": "Package",
               "version": "[2.21.0, )"
             },
+            "Microsoft.AspNet.Cors": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.Azure.WebJobs.Extensions.ServiceBus": {
               "target": "Package",
               "version": "[5.12.0, )"

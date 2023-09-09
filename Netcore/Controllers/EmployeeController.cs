@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using NetCore.Domain.Abstractions.Service;
 using NetCore.Domain.Entities;
 using NetCore.Domain.Entities.Constants;
