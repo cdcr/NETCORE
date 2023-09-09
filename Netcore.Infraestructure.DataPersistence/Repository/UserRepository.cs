@@ -45,7 +45,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
             var query = 
                 $"SELECT [Password] " +
                 $" FROM {DatabaseTables.User} "+
-                $" WHERE [UserName] LIKE %'{userName}'%";
+                $" WHERE [UserName] LIKE '%{userName}%'";
             var result = (await ExecuteQuery<string>(query)).FirstOrDefault();
             return result;
         }

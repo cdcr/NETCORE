@@ -10,7 +10,7 @@ namespace NetCore.Domain.Entities
         public string Adress{ get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        public string Title{ get; set; }
+        public string Profile{ get; set; }
         public bool IsFullTime { get; set; }
         public decimal HourRate { get; set; }
         public bool Active { get; set; }
@@ -30,7 +30,7 @@ namespace NetCore.Domain.Entities
             Adress = dto.Address;
             Email = dto.Email;
             PhoneNumber = dto.PhoneNumber;
-            Title = dto.Profile;
+            Profile = dto.Profile;
             IsFullTime = dto.IsFullTime;
             InsertedDate = dto.InsertedDate;
             UpdatedDate = dto.UpdatedDate;

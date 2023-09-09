@@ -57,8 +57,8 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 case "Adress":
                     Choseen = "Adress";
                     break;
-                case "title":
-                    Choseen = "Title";
+                case "Profile":
+                    Choseen = "Profile";
                     break;
                 default: 
                     Choseen = "Id";
@@ -81,7 +81,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $",[email] = @email " +
                 $",[PhoneNumber] = @phoneNumber " +
                 $",[WorkingHours] = @workingHours " +
-                $",[Title] = @title  " +
+                $",[Profile] = @profile  " +
                 $",[IsFullTime] = @isFullTime" +
                 $",[InsertedDate] = @insertedDate" +
                 $",[UpdatedDate] = @updatedDate" +
@@ -95,7 +95,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                     @adress = employee.Adress,
                     @email = employee.Email,
                     @phoneNumber = employee.PhoneNumber,
-                    @title = employee.Title,
+                    @profile = employee.Profile,
                     @isFullTime = employee.IsFullTime,
                     @insertedDate = employee.InsertedDate,
                     @updatedDate = employee.UpdatedDate,
@@ -111,7 +111,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $",[Adress]" +
                 $",[email]" +
                 $",[PhoneNumber]" +
-                $",[Title]" +
+                $",[Profile]" +
                 $",[IsFullTime]" +
                 $",[InsertedDate]" +
                 $",[UpdatedDate] " +
@@ -123,7 +123,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                 $",@adress " +
                 $",@email " +
                 $",@phoneNumber " +
-                $",@title  " +
+                $",@profile  " +
                 $",@isFullTime" +
                 $",@insertedDate" +
                 $",@updatedDate" +
@@ -139,7 +139,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
                     @adress = employee.Adress,
                     @email = employee.Email,
                     @phoneNumber = employee.PhoneNumber,
-                    @title = employee.Title,
+                    @profile = employee.Profile,
                     @isFullTime = employee.IsFullTime,
                     @insertedDate = employee.InsertedDate,
                     @updatedDate = employee.UpdatedDate,

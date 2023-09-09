@@ -44,7 +44,7 @@ namespace NetCore.Services.BusinessLogic
         public async Task<bool> ValidateSession(string UserName, string password)
         {
             var passwordEncrypted = await _unitOfWork.UserRepository.GetPasswordByUserName(UserName);
-            if (passwordEncrypted != null)
+            if (passwordEncrypted == null)
                 return false;
             else
             {
