@@ -17,9 +17,12 @@ builder.Services.AddSingleton<ISystemInfo>(systemInfo);
 //optionsBuilder.UseSqlServer(systemInfo.ConnectionString);
 builder.Services.AddScoped<DapperContext>();
 //builder.Services.AddSingleton(optionsBuilder.Options);
-builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddTransient<IEmployeeService, EmployeeService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

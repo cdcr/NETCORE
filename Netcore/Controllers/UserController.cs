@@ -4,6 +4,8 @@ using NetCore.Domain.Entities.DTO;
 
 namespace Netcore.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class UserController : Controller
     {
         private IUserService _userService;
@@ -11,7 +13,8 @@ namespace Netcore.Controllers
         {
             _userService = userService;
         }
-
+        [HttpGet]
+        [Route("ValidateSession")]
         public async Task<bool> ValidateSession(string username, string password)
         {
             return (await _userService.ValidateSession(username,password));

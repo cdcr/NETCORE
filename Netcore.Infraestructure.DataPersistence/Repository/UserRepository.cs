@@ -6,7 +6,7 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
 {
     public class UserRepository : DBBase, IUserRepository
     {
-        public UserRepository(DapperBase context) : base(context)
+        public UserRepository(DapperContext context) : base(context)
         {
         }
 
