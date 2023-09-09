@@ -30,7 +30,7 @@ namespace NetCore.Domain.Entities
             Adress = dto.Address;
             Email = dto.Email;
             PhoneNumber = dto.PhoneNumber;
-            Title = dto.Title;
+            Title = dto.Profile;
             IsFullTime = dto.IsFullTime;
             InsertedDate = dto.InsertedDate;
             UpdatedDate = dto.UpdatedDate;

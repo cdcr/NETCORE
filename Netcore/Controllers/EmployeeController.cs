@@ -43,9 +43,10 @@ namespace Netcore.Controllers
         }
 
         [HttpPost]
-        public void AddEmployee(EmployeeDTO employee)
+        public void AddEmployee(InsertEmployeeDTO employee)
         {
-             _emloyeeService.AddEmployee(employee);
+             var _employee = new EmployeeDTO(employee);
+             _emloyeeService.AddEmployee(_employee);
         }
 
         [HttpPut]
