@@ -78,7 +78,7 @@ namespace NetCore.Services.BusinessLogic
                     Active = result.Active
                 });
         }
-        public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(int weekPeriodId, int employeeId)
+        public async Task<EmployeeDTO> GetEmployeeByWeekPeriodId(string weekPeriodId, int employeeId)
         {
             var result = await _unitOfWork.EmployeeRepository.GetEmployeeByEmployeeAndWeekPeriod(weekPeriodId, employeeId);
             if (result == null)

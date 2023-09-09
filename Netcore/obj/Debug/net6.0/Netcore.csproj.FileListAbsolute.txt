@@ -271,7 +271,6 @@ C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.Generat
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.AssemblyInfoInputs.cache
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.AssemblyInfo.cs
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.csproj.CoreCompileInputs.cache
-C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.MvcApplicationPartsAssemblyInfo.cs
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\Netcore.MvcApplicationPartsAssemblyInfo.cache
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\staticwebassets\msbuild.Netcore.Microsoft.AspNetCore.StaticWebAssets.props
 C:\repos2023\ChallengeEmployee2\NETCORE\Netcore\obj\Debug\net6.0\staticwebassets\msbuild.build.Netcore.props

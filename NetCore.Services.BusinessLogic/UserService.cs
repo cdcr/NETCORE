@@ -44,11 +44,20 @@ namespace NetCore.Services.BusinessLogic
         public async Task<bool> ValidateSession(string UserName, string password)
         {
             var passwordEncrypted = await _unitOfWork.UserRepository.GetPasswordByUserName(UserName);
-            if (passwordEncrypted != null)
+            if (passwordEncrypted == null)
                 return false;
             else
             {
-                return (Decrypt(password).Equals(Decrypt(passwordEncrypted)));
+                var pDecrypt="";
+                try
+                {
+                    pDecrypt = Decrypt(password);
+                }
+                catch
+                {
+                    return false;
+                }
+                return (pDecrypt.Equals(Decrypt(passwordEncrypted)));
             }
         }
 

@@ -23,10 +23,10 @@ namespace NetCore.Infraestructure.DataPersistence.Repository
         }
         public async Task<EmployeeWeekPeriod> GetEmployeeByEmployeeAndWeekPeriod(string weekPeriodId, int employeeId)
         {
-            var query = $"SELECT E.Id,E.[FirstName],E.[LastName],E.[Address],E.[Email],E.[PhoneNumber],E.[Profile],E.[IsFullTime],E.[HourRate],E.[Active],E.[InsertedDate],E.[UpdatedDate], WP.WorkedHours" +
+            var query = $"SELECT E.Id,E.[FirstName],E.[LastName],E.[Address],E.[Email],E.[PhoneNumber],E.[Profile],E.[IsFullTime],E.[HourRate],E.[Active],E.[InsertedDate],E.[UpdatedDate], WP.WorkedHours " +
                 $"FROM {DatabaseTables.Employee} AS E " +
                 $"INNER JOIN {DatabaseTables.WeekPeriod} AS WP " +
-                $"ON E.Id = WP.EmployeeId AND WP.Id = {weekPeriodId} " + 
+                $"ON E.Id = WP.EmployeeId AND WP.Id = '{weekPeriodId}' " + 
                 $"WHERE E.ID = {employeeId}";                
             var result = (await ExecuteQuery<EmployeeWeekPeriod>(query)).FirstOrDefault();
             return result;
